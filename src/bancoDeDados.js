@@ -19,4 +19,14 @@ function getProdutos(){
   return Object.values(produtos);//retornando todos os valores dos produtos
 }
 
-module.exports = { salvarProduto, getProduto, getProdutos };//exportando funções
+function excluirProduto(id){
+  const produto = produtos[id];
+  delete produtos[id];
+  return produto;
+}
+
+module.exports = { salvarProduto, getProduto, getProdutos, excluirProduto };//exportando funções
+
+
+
+
